@@ -7,9 +7,12 @@ const router = express.Router();
 const fs = require('fs');
 const multer = require('multer');
 const md5 = require('md5');
+const upload_file = require("./upload_file");
 router.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "../views", "index.html"));
 });
+router.post("/getSize", upload_file.getSize);
+router.post("/video", upload_file.video);
 var storage = multer.diskStorage({
     destination: function (req, file, cb) {
         cb(null, 'upload/');

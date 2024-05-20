@@ -8,10 +8,16 @@ const router = express.Router();
 const fs = require('fs'); //文件
 const multer = require('multer');
 const md5 = require('md5');
-
+const upload_file = require("./upload_file");
 router.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "../views", "index.html"));
 })
+	// 视频上传（查询当前切片数）
+router.post("/getSize", upload_file.getSize);
+// 视频上传接口
+router.post("/video", upload_file.video);
+
+
 
 // 使用硬盘存储模式设置存放接收到的文件的路径以及文件名
 var storage = multer.diskStorage({

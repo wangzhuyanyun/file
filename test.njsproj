@@ -30,7 +30,6 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
-    <Content Include="start.js" />
     <None Include="app.ts" />
     <None Include="routes\index.ts" />
     <None Include="routes\user.ts" />
@@ -50,6 +49,9 @@
     <Folder Include="public\stylesheets\" />
     <Folder Include="routes\" />
     <Folder Include="views\" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="routes\upload_file.ts" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
   <ProjectExtensions>
