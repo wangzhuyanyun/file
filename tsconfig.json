@@ -1,0 +1,16 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "module": "commonjs",
+    "removeComments": true,
+    "outDir": "./",
+    "target": "es6",
+    "lib": [ "es6" ],
+    "sourceMap": true
+  },
+  "include": ["./"],
+  "exclude": [
+    "node_modules",
+    "views"
+  ]
+}
