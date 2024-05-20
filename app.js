@@ -22,7 +22,7 @@ app.set('view engine', 'pug');
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'upload')));
 app.use(index_1.default);
-app.listen(8080, () => {
-    console.log("http://127.0.0.1:8081");
+app.listen(9000, () => {
+    console.log("http://127.0.0.1:9000");
 });
 //# sourceMappingURL=app.js.map
